@@ -17,15 +17,10 @@ header, footer {
 }
 
 main {
-    background-color: cornsilk;
+    /* background-color: rgb(250, 245, 225); */
     padding: 20px;
-}
-
-
-.layout-sidebar {
-    display: grid;
-    gap: 10px;
-    grid-template-columns: 2fr 1fr;
+    border-color: #eee;
+    border-style: dotted;
 }
 
 /* The sidebar menu */
@@ -75,3 +70,29 @@ main {
     height: 150px;
     border-radius: 50%;
   }
+
+html * {
+font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: smaller;
+    background-color: #ffffff;
+    padding-top: 10px;
+}
+
+.footer-content {
+    position: relative;
+    bottom: 10px;
+    display: inline;
+}
+
+.menu-image {
+    display: block;
+    margin-right: auto;
+}

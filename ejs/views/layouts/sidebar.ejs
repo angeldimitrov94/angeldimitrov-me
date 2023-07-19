@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Angel Dimitrov's personal site">
+    <meta name="keywords" content="software, engineering, NodeJS, C#, .NET, Docker">
+    <meta name="author" content="Angel Dimitrov">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%- title %></title>
     <link rel="stylesheet" href="css/main.css">
@@ -12,20 +15,21 @@
 
         <%- include('../partials/header.ejs') %>
 
-        <div class="layout-sidebar">
+        <div>
             <main><%- body %></main>
             <div class="sidenav">
                 <% links.forEach((link) => { %>
                     <a href="/<%= link.path %>"><%= link.name %></a>
                 <% }) %>
+                <a href="https://www.linkedin.com/in/angel-dimitrov/" target="_blank">
+                    <img class="menu-image" src="/img/LI-In-Bug.png" width="30" height="25">
+                </a>
+                <a href="https://github.com/angeldimitrov94" target="_blank">
+                    <img class="menu-image" src="/img/GitHub_Logo_White.png" width="55" height="25">
+                </a>
                 <img src="/img/me.jpg" alt="Avatar" class="avatar">
             </div>
         </div>
-
-        <%- include('../partials/footer.ejs') %>
-
     </div>
-
-
 </body>
 </html>

@@ -20,12 +20,25 @@ const links = [
     {path: "projects", name: "Projects"}
 ];
 
+function buildRenderLocals(title) {
+    return { title, layout: './layouts/sidebar', links };
+}
+
 app.get('/', (req, res) => {
-    res.render('index', { title: 'Angel Dimitrov - SWE', layout: './layouts/sidebar', links });
+    res.render('home', buildRenderLocals('Angel Dimitrov - SWE'));
 })
 
 app.get('/about', (req, res) => {
-    res.render('about', { title: 'About Page', layout: './layouts/sidebar', links })
+    res.render('about', buildRenderLocals('About'))
 })
+
+app.get('/projects', (req, res) => {
+    res.render('projects', buildRenderLocals('Projects'))
+})
+
+//The 404 Route (ALWAYS Keep this as the last route)
+app.get('*', function(req, res){
+    res.status(404).render('404', buildRenderLocals('Page not found'))
+  });
 
 app.listen(PORT, HOST, () => { console.info(`Listening on http://${HOST}:${PORT}`) });
