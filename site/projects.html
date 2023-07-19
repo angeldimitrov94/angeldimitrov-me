@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Angel Dimitrov's personal site">
+    <meta name="keywords" content="software, engineering, NodeJS, C#, .NET, Docker">
+    <meta name="author" content="Angel Dimitrov">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angel Dimitrov - SWE</title>
+    <link rel="stylesheet" href="/public/css/main.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="https://www.linkedin.com/in/angel-dimitrov/" target="_blank">
+            <img class="menu-image" src="/public/img/LI-In-Bug.png" width="30" height="25">
+        </a>
+        <a href="https://github.com/angeldimitrov94" target="_blank">
+            <img class="menu-image" src="/public/img/GitHub_Logo.png" width="55" height="25">
+        </a>
+    </div>
+    <div class="content">
+        <h2>Angel Dimitrov - Software Engineer</h2>
+        <h5>Nexus EOL (side/weekend project in progress)</h5>
+        <p><i>nexus - noun - nex·​us ˈnek-səs : CONNECTION, LINK</i></p>
+        <p><i>EOL = end-of-line, describes the final manufacturing test performed on an assembled manufactured product
+                at the end of the assembly line</i></p>
+        <h6>What does it do?</h6>
+        <p>An aggregator and central connection hub for manufacturing test data (hence 'Nexus').
+            When a product is tested by a manufacturer, said test status and data is sent to the platform.
+            Pushes of data to the platform can trigger subsequent logic, such as back-office operations.</p>
+        <h6>What issue does it solve?</h6>
+        <p>Manufacturing processes sometimes suffer from being woefully disconnected.
+            The amount of data available can offer tremendous value, IF it is captured.
+            The platform is specifically tailored to make it easy for manufacturing testing teams to send their data
+            to a centralized location where various stake-holders can access it from the web, as opposed to various
+            random
+            bits of data being stored away on scattered machines across multiple networks and with varying formats.
+        </p>
+        <h6>What does the software implementation of the platform look like?</h6>
+        <p>The project consists of multiple logically-separated containerized
+            Node.Js microservices working with a MongoDB database and a client-rendered Vue.Js front-end.
+            It employs a multi-tenant architecture for logically separating multiple accounts'/users' data from
+            each other within the same common data store, which brings value at reasonable compute cost.
+        </p>
+        <h6>Questions?</h6>
+        <p>Feel free to DM on <a href="https://www.linkedin.com/in/angel-dimitrov/" target="_blank">Linkedin</a> if
+            you're interested and would like to learn/discuss more.</p>
+    </div>
+</body>
+</html>

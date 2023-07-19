@@ -1,27 +1,13 @@
 version: '3.7'
 
-networks:
-  node-network:
-    driver: bridge
-
 services:
-  ejs:
-    build: 
-      context: ./ejs
-      dockerfile: Dockerfile
-    networks:
-      - node-network
-    restart: always
-
   nginx:
     image: nginx
     ports:
     - '80:80'
     # - '443:443'
-    networks:
-      - node-network
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
-      - ./ejs/public:/usr/share/nginx/html
-      # - ./nginx/ssl/nexuseol.crt:/etc/ssl/certs/nexuseol.crt
-      # - ./nginx/ssl/nexuseol.key:/etc/ssl/private/nexuseol.key
+      - ./site:/home/angeldimitrov-me
+      # - ./nginx/ssl/angeldimitrov-me.crt:/etc/ssl/certs/angeldimitrov-me.crt
+      # - ./nginx/ssl/angeldimitrov-me.key:/etc/ssl/private/angeldimitrov-me.key
